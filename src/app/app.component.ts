@@ -15,5 +15,9 @@ export class AppComponent {
 
   onInputChange() {
     this.romanNumber = this.convertNumberService.convertNumberToRoman(this.number);
+
+    if (this.romanNumber === '') {
+      this.romanNumber = "El número no es valido. Los números validos van desde el 1 hasta el 1999";
+    }
   }
 }

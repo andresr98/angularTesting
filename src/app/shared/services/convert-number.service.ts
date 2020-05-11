@@ -11,6 +11,14 @@ export class ConvertNumberService {
     const maxValue = 1999;
     const minValue = 1;
 
+    if (number === '') {
+      return '';
+    }
+
+    if (!number.trim()) {
+      return '';
+    }
+
     if (isNaN(number)) {
       return '';
     }

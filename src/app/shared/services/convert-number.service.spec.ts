@@ -21,6 +21,20 @@ describe('ConvertNumberService', () => {
     expect(romanNumber).toBe(expectedString);
   });
 
+  it('should not convert an empty string to a roman number', () => {
+    const emptyString = '';
+    const expectedString = '';
+    const romanNumber = service.convertNumberToRoman(emptyString);
+    expect(romanNumber).toBe(expectedString);
+  });
+
+  it('should not convert an space string to a roman number', () => {
+    const spaceString = '';
+    const expectedString = '';
+    const romanNumber = service.convertNumberToRoman(spaceString);
+    expect(romanNumber).toBe(expectedString);
+  });
+
   it('should not convert a number greater than 1999 to a roman number', () => {
     const stringTwothousand = '2000';
     const expectedString = '';
